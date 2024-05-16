@@ -6,7 +6,7 @@ public class Accounts
  
     private int accountNumber;
     private string name;
-    private double balance;
+    private double balance;           
     private string accountType;
 
 
