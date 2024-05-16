@@ -1,0 +1,160 @@
+
+
+
+public class Accounts
+{
+ 
+    private int accountNumber;
+    private string name;
+    private double balance;
+    private string accountType;
+
+
+    public Accounts(int accountNumberr, string name, string accountType)
+    {
+        this.accountNumber = accountNumber;
+       this.name = name;
+        balance = 0;
+        this.accountType = accountType;
+    }
+
+   
+    public void InputData()
+    {
+        Console.WriteLine("Enter name:");
+        name = Console.ReadLine();
+        Console.WriteLine("Enter account type:");
+        accountType = Console.ReadLine();
+        Console.WriteLine("Enter account number:");
+        accountNumber = Convert.ToInt32(Console.ReadLine());
+    }
+
+    
+    public void ShowData()
+    {
+        Console.WriteLine("Account Number is = " + accountNumber);
+        Console.WriteLine("Name= " + name);
+        Console.WriteLine("Balance=  " + balance);
+        Console.WriteLine("Account Type= " + accountType);
+    }
+
+   
+    public void Deposit(double amount)
+    {
+        balance += amount;
+        Console.WriteLine("Your amount is Deposited " + amount );
+    }
+
+   
+    public void Withdraw(double amount)
+    {
+        if (balance >= amount)
+        {
+            balance -= amount;
+            Console.WriteLine("Your amount is Withdrawn " + amount );
+        }
+        else
+        {
+            Console.WriteLine("Insufficient balance");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+        Console.WriteLine("Enter your account number  ");
+        int accNumber = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter your name ");
+        string accName = Console.ReadLine();
+        Console.WriteLine("Enter your account type ");
+        string accType = Console.ReadLine();
+
+        Accounts obj = new Accounts(accNumber, accName, accType);
+        obj.ShowData();
+        obj.Deposit(1000);
+        obj.Withdraw(500);
+    }
+}
+
+
+
+public class Accounts
+{
+ 
+    private int accountNumber;
+    private string name;
+    private double balance;
+    private string accountType;
+
+
+    public Accounts(int accountNumberr, string name, string accountType)
+    {
+        this.accountNumber = accountNumber;
+       this.name = name;
+        balance = 0;
+        this.accountType = accountType;
+    }
+
+   
+    public void InputData()
+    {
+        Console.WriteLine("Enter name:");
+        name = Console.ReadLine();
+        Console.WriteLine("Enter account type:");
+        accountType = Console.ReadLine();
+        Console.WriteLine("Enter account number:");
+        accountNumber = Convert.ToInt32(Console.ReadLine());
+    }
+
+    
+    public void ShowData()
+    {
+        Console.WriteLine("Account Number is = " + accountNumber);
+        Console.WriteLine("Name= " + name);
+        Console.WriteLine("Balance=  " + balance);
+        Console.WriteLine("Account Type= " + accountType);
+    }
+
+   
+    public void Deposit(double amount)
+    {
+        balance += amount;
+        Console.WriteLine("Your amount is Deposited " + amount );
+    }
+
+   
+    public void Withdraw(double amount)
+    {
+        if (balance >= amount)
+        {
+            balance -= amount;
+            Console.WriteLine("Your amount is Withdrawn " + amount );
+        }
+        else
+        {
+            Console.WriteLine("Insufficient balance");
+        }
+    }
+}
+
+class Program
+{
+    static void Main(string[] args)
+    {
+        
+        Console.WriteLine("Enter your account number  ");
+        int accNumber = Convert.ToInt32(Console.ReadLine());
+        Console.WriteLine("Enter your name ");
+        string accName = Console.ReadLine();
+        Console.WriteLine("Enter your account type ");
+        string accType = Console.ReadLine();
+
+        Accounts obj = new Accounts(accNumber, accName, accType);
+        obj.ShowData();
+        obj.Deposit(1000);
+        obj.Withdraw(500);
+    }
+}
