@@ -1,0 +1,25 @@
+// C# program to illustrate the
+// concept of private Constructor
+using System;
+
+public class Geeks {
+
+	// Private constructor
+	// without parameter
+	private Geeks()
+	{
+		Console.WriteLine("Private Constructor");
+	}
+}
+
+// Driver Class
+class GFG {
+
+	// Main Method
+	static void Main() {
+
+		// This line raise error because
+		// the constructor is inaccessible
+		Geeks obj = new Geeks();
+	}
+}
