@@ -1,0 +1,52 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class example
+    {
+        public static String name;
+        public static int id;
+     //static constructor
+     
+     static example()
+        {
+            name = "tushar";
+            id = 1;
+            Console.WriteLine("static constrictor is run!!!");
+        }
+
+
+    //we can not create more than one static constructor
+       // static example(int id)
+        //{
+
+        //}
+        // default constructor
+        public example()
+        {
+            Console.WriteLine("this the default !!");
+        }
+        //instance method
+        public static void getdata()
+        {
+            Console.WriteLine("name is " + name + " id is " + id);
+        }
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+           // before default constructor always static constructor called;
+            example example = new example();
+           //example.getdata();
+            Console.ReadLine();
+            
+        }
+    }
+}
