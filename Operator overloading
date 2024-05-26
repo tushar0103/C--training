@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApp4
+{
+    class example
+    {
+
+        public string name;
+        public int age; 
+        //there is always use a function with operator keyword while doing operator overloading;
+        public static example operator +(example obj1, example obj2)
+        {
+             example obj3 = new example();
+            obj3.name = obj1.name+obj2.name;
+                obj3.age = obj2.age+obj1.age;    
+            return obj3;
+        }
+    
+
+    }
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+
+           example obj1 = new example();
+            example obj2 = new example();
+            obj1.name = "Tushar";
+            obj1.age = 1;
+            obj2.name = "kumar";
+            obj2.age = 2;
+            example obj3= new example();
+            obj3=obj1+obj2;
+            Console.ReadLine();
+            
+        }
+    }
+}
