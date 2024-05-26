@@ -1,0 +1,32 @@
+using System;
+
+namespace ConsoleApp3
+{
+    internal class Program
+    {
+        int id;
+        String name;
+        public Program(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public void show()
+        {
+            Console.WriteLine("The id of student  is:" +id+ " and the name is  " + name);
+        }
+        public void update(int id2,string name2)
+        {
+            id = id2;
+            name = name2;
+        }
+        static void Main(string[] args)
+        {
+            Program obj = new Program(11, "tushar");
+            obj.show();
+            obj.update(12, "harsh");
+            obj.show();
+           Console.ReadLine();
+        }
+    }
+}
