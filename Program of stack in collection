@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+
+namespace collectionexample2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           Stack<int> stack = new Stack<int>();
+            stack.Push(1);
+            stack.Push(2);
+            stack.Push(3);
+            stack.Push(4);
+            stack.Push(5);
+            Console.WriteLine("number of items are===="+stack.Count);
+            foreach (var item in stack)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("\n top of the elemnt is:=="+stack.Peek());
+
+            Console.WriteLine("again pop a elemnt");
+            int x=stack.Pop();
+            Console.WriteLine("\n poped elemnt is:=="+stack.Pop());
+            Console.WriteLine("now push more elemts ");
+            stack.Push(6);
+            stack.Push(7);
+            stack.Push(8);
+            Console.WriteLine("\n  now number of elemts" + stack.Count);
+            foreach (var item in stack)
+            {
+                Console.Write(item + " ");
+
+            }
+            Console.WriteLine("\ntop elemnt is"+stack.Peek() + " ");
+
+
+
+            // Wait for user input before closing the console
+            Console.ReadLine();
+        }
+    }
+}
