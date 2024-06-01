@@ -1,0 +1,101 @@
+using System;
+using System.Collections.Generic;
+
+namespace collectionexample2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+            // Create a new list of strings
+            List<string> list = new List<string>();
+
+            // Add elements to the list one by one
+            list.Add("Tushar");
+            list.Add("kumar");
+            list.Add("rajput");
+            list.Add("singh");
+
+            // Print the number of elements in the list
+            Console.WriteLine(list.Count);  // Output: 4
+
+            // Print all elements using a foreach loop
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");  // Output: Tushar kumar rajput singh 
+            }
+            Console.WriteLine();
+
+            // Print all elements using a for loop
+            for (var i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + " ");  // Output: Tushar kumar rajput singh 
+            }
+            Console.WriteLine();
+
+            // Sort the elements in the list
+            list.Sort();
+
+            // Print all sorted elements using a for loop
+            for (var i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + " ");  // Output: Tushar kumar rajput singh 
+            }
+            Console.WriteLine();
+
+            // Create an array of strings
+            string[] arr = { "sumit", "abhishek", "amir" };
+
+            // Add elements from the array to the list
+            list.AddRange(arr);
+            Console.WriteLine("\n number of elemnts" + list.Count);
+
+            // Print all elements after adding the array
+            Console.WriteLine("Print all elements after adding the array");
+            for (var i = 0; i < list.Count; i++)
+            {
+                Console.Write(list[i] + " ");  // Output: abhishek amir kumar rajput singh sumit Tushar
+            }
+            Console.WriteLine();
+            Console.WriteLine("\n number of elemnts" + list.Count);
+
+            // Create another list of strings
+            List<string> list1 = new List<string>();
+            list1.Add("humayu");
+            list1.Add("amiran");
+
+            // Add elements from the second list to the first list
+            Console.WriteLine("Add elements from the second list to the first list======");
+            list.AddRange(list1);
+            Console.WriteLine("\n number of elemnts============" + list.Count);
+
+            // Print all elements after adding the second list
+            //foreach (var item in list)
+            //{
+            //Console.Write(item + " ");  // Output: abhishek amir kumar rajput singh sumit Tushar humayu amiran
+            //}
+
+
+
+
+
+            list.InsertRange(1, list1);
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("\n number of elemnts============="+list.Count);
+            Console.WriteLine("==========removine the 3r element=========");
+            list.RemoveAt(3);
+            Console.WriteLine("\n number of elemnts" + list.Count);
+            foreach (var item in list)
+            {
+                Console.Write(item + " ");
+            }
+            Console.WriteLine("===============================================");
+           
+            // Wait for user input before closing the console
+            Console.ReadLine();
+        }
+    }
+}
