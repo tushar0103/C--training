@@ -1,0 +1,30 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
+namespace collectionexample2
+{
+    internal class Program
+    {
+        static void Main(string[] args)
+        {
+           Hashtable ht = new Hashtable();
+            ht.Add("1", "tushar");
+            ht.Add("4", "aviral");
+            ht.Add("3", "anshuman");
+            ht.Add("2", "patek");
+            foreach (var item in ht.Keys)
+            {
+                Console.WriteLine(item);
+            }
+            foreach (var item in ht.Values)
+            {
+                Console.Write(item);
+            }
+
+            
+            // Wait for user input before closing the console
+            Console.ReadLine();
+        }
+    }
+}
