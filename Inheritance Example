@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace InheritanceExample
+
+   
+{
+
+    class experiment
+    {
+       public int id;
+        public string name;
+      public experiment(int id, string name)
+        {
+            this.id = id;
+            this.name = name;
+        }
+        public void display()
+        {
+            Console.WriteLine("id of the person is :"+id+" \n and the name of the person is :"+name);
+        }
+
+       
+       
+    }
+   internal class Program : experiment
+    {
+        int age;
+        public Program(int age):base(2,"tushar") 
+        {
+            this.age = age;
+
+        }
+        public void Show() {
+            Console.WriteLine("the age of the person is:  " + age);
+        }
+    
+       
+        static void Main(string[] args)
+        {
+            Program obj= new Program(22);
+            obj.Show();
+            obj.display();
+            Console.ReadLine();
+        }
+    }
+}
