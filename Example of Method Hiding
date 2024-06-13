@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace InheritanceExample
+
+   
+{
+ class example
+    {
+        public  void Show()
+        {
+            Console.WriteLine("this is the parent class");
+        }
+
+    }
+   internal class Program : example
+    {
+        public new void Show()
+        {
+            Console.WriteLine("this is the example of abstract");
+        }
+
+        static void Main(string[] args)
+        {
+           
+            Program obj = new Program();
+            obj.Show();
+            
+            Console.ReadLine();
+        }
+    }
+}
