@@ -19,7 +19,7 @@ namespace InheritanceExample
     }
    internal class Program : example
     {
-        public new void Show()
+        public new void Show() //  by applying here new we can not call method of parent class
         {
             Console.WriteLine("this is the example of abstract");
         }
