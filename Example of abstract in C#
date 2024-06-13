@@ -1,0 +1,22 @@
+  abstract class example
+    {
+        public abstract void Show();
+
+    }
+   internal class Program : example
+    {
+        public override void Show()
+        {
+            Console.WriteLine("this is the example of abstract");
+        }
+
+        static void Main(string[] args)
+        {
+           
+            Program obj = new Program();
+            obj.Show();
+            
+            Console.ReadLine();
+        }
+    }
+}
