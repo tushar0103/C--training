@@ -1,0 +1,13 @@
+ internal class Program 
+  {
+     public int add(int a,int b) { return a+b; }
+      public int add(int a, int b, int c) { return a+b+c; }
+
+      static void Main(string[] args)
+      {
+         Program obj = new Program();
+        Console.WriteLine( "the sum of two number is   "+obj.add(1,2));
+          Console.WriteLine("the sum of three number is   " + obj.add(1, 2,7));
+          Console.ReadLine();
+      }
+  }
