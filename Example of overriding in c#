@@ -1,0 +1,26 @@
+
+   class example
+    {
+        public virtual void show()
+        {
+            Console.WriteLine("this is th example of overriing in c#");
+        }
+    }
+   internal class Program : example
+    {
+        public override void show()
+        {
+            base.show();
+            Console.WriteLine("this is the sub class ");
+        }
+
+        static void Main(string[] args)
+        {
+           Program obj = new Program();
+            obj.show();
+            
+            
+            Console.ReadLine();
+        }
+    }
+}
