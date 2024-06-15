@@ -1,0 +1,23 @@
+namespace InheritanceExample
+ 
+{
+   internal class Program 
+    {
+        static int id;
+        static string name;
+        static Program()
+        {
+            id = 1;
+            name = "tushar";
+
+        }
+        static void Main(string[] args)
+        {
+            Program obj=new Program();
+            Console.WriteLine($"ID: {id}, Name: {name}");
+            Console.ReadLine();
+        }
+    }
+   
+
+}
