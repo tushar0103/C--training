@@ -1,0 +1,45 @@
+using
+    System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace InheritanceExample
+ 
+{
+    internal class Program 
+    {
+        private int id;
+        private string name;
+        public int Id { 
+            get { return id; }
+            set { id = value; }
+        }
+        public string Name { 
+            get { return name; }
+            set { name = value; }
+        }
+        public void setId(int id) {
+        this.id = id;
+                }
+        public void setName(string name)
+        {
+            this.name = name;
+        }
+
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            program.setId(1);
+            program.setName("ExampleName");
+
+            Console.WriteLine($"ID: {program.Id}, Name: {program.Name}");
+
+        }
+    }
+   
+
+}
