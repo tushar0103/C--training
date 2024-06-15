@@ -1,0 +1,49 @@
+using
+    System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace InheritanceExample
+ 
+{
+
+     class Example
+    {
+        protected string id;
+        public virtual void update(string newId) { 
+            id= newId;
+        }
+    }
+   internal class Program : Example
+    {
+       public sealed override void update(string newId)
+        {
+            id = newId;
+        }
+        static void Main(string[] args)
+        {
+            Program prog = new Program();
+            prog.update("12345"); // Updates id in Program class
+
+            Example ex = new Example();
+            ex.update("54321"); // Updates id in Example class
+
+            // Demonstrating that the update method in Program cannot be overridden further
+            // Uncommenting the following lines would cause a compile-time error
+            // class FurtherDerivedClass : Program
+            // {
+            //     public override void update(string newId)
+            //     {
+            //         // This would cause a compile-time error because the method is sealed in Program
+            //     }
+            // }
+
+        }
+    }
+   
+
+}
