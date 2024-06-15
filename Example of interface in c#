@@ -1,0 +1,32 @@
+using
+    System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Security.Policy;
+using System.Text;
+using System.Threading.Tasks;
+using System.Xml.Linq;
+
+namespace InheritanceExample
+ 
+{
+    interface MyInterface
+    {
+         void show();
+    }
+
+    internal partial class Program : MyInterface
+    {
+        public void show()
+        {
+            Console.WriteLine("Implementation of show method.");
+        }
+        static void Main(string[] args)
+        {
+            
+
+        }
+    }
+   
+
+}
