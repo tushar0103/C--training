@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DelegateExample
+{
+    public delegate void calculation(int a, int b);
+    public delegate void showDetails();
+    public delegate void calculation2(int num);
+    internal class Program
+    {
+        public void square(int num)
+        {
+            int result = num * num;
+            Console.WriteLine("the square of {0} is {1}", num, result);
+        }
+        public void cube(int num)
+        {
+            int result = num * num * num;
+            Console.WriteLine("the cube of the {0} is  {1}",num, result);
+        }
+        public void show() { Console.WriteLine("this is show method"); }
+        public void addition(int a, int b) { 
+         int result= a + b;
+            Console.WriteLine("addition of the number is : "+ result);
+        }
+        public void multiply(int a, int b)
+        {
+            int result= a * b;
+            Console.WriteLine(" multiple of the number is :  " + result);
+        }
+        public void subtraction(int a, int b)
+        {
+            int result= a - b;
+            Console.WriteLine("substract of the number is : " + result);
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            /*calculation obj = new calculation(program.addition);
+            obj(2, 3); // addition and result is 5 
+            obj=new calculation(program.multiply);
+            obj(3, 4);
+            obj=new calculation(program.subtraction);
+            obj(4, 5);*/
+
+            showDetails obj = new showDetails(program.show);
+            obj();
+            calculation2 obj2 = new calculation2(program.square);
+            obj2(4);
+            calculation2 obj3= new calculation2(program.cube);
+            obj3(4);
+            Console.ReadLine();
+        }
+    }
+}
