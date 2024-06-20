@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DelegateExample
+{
+    public delegate void calculation(int a, int b);
+    internal class Program
+    {
+        public void addition(int a, int b) { 
+         int result= a + b;
+            Console.WriteLine("addition of the number is : "+ result);
+        }
+        public void multiply(int a, int b)
+        {
+            int result= a * b;
+            Console.WriteLine(" multiple of the number is :  " + result);
+        }
+        public void subtraction(int a, int b)
+        {
+            int result= a - b;
+            Console.WriteLine("substract of the number is : " + result);
+        }
+        static void Main(string[] args)
+        {
+            Program program = new Program();
+            calculation obj = new calculation(program.addition);
+            obj(2, 3); // addition and result is 5 
+            obj=new calculation(program.multiply);
+            obj(3, 4);
+            obj=new calculation(program.subtraction);
+            obj(4, 5);
+            Console.ReadLine();
+        }
+    }
+}
